@@ -1,4 +1,4 @@
-import "./services/dotenv";
+process.loadEnvFile();
 import { PORT, SERVER_ON } from "./server/consts";
 import server from "./server/server";
 
