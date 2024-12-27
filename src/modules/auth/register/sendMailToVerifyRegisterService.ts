@@ -1,4 +1,4 @@
-import { transporter } from "../../../services/transporter";
+import { transporter } from "../../../services/nodemailer/transporter";
 
 export const sendMailToVerifyRegisterService = async (
   to: string,
@@ -7,7 +7,7 @@ export const sendMailToVerifyRegisterService = async (
   return await transporter.sendMail({
     from: process.env.NODEMAILER_GMAIL,
     to,
-    subject: "Vericar email en template-node-ts-express-drizzleORM-SQLite 💪",
+    subject: "Vericar email en template-node 💪",
     html: `<a href=${link} style="color: royalblue">Haz clic en mí para verificar su registro</a>`,
   });
 };
